@@ -1,0 +1,36 @@
+html, /* พื้นหลังทั้งหน้า */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Prompt', sans-serif;
+  background: url('https://i.pinimg.com/736x/0c/22/c6/0c22c69173a15ede640fa1b2c213bdd8.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* ใช้เฉพาะหน้า Main */
+body.no-background {
+  background: none !important;
+}
+
+/* Layout หลักของทุกหน้า */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; /* ✅ ลบ padding ทิ้ง เพื่อให้หน้าหลักครอบเต็ม */
+}
+
+/* สำหรับหน้าอื่นที่ต้องการ padding */
+.main-container.with-padding {
+  padding: 40px 16px;
+}
+
+/* เฉพาะหน้า Main ที่ไม่ต้องการพื้นหลังและ padding */
+body.no-background .main-container {
+  background: none !important;
+}
